@@ -16,7 +16,7 @@ public class Driver {
 	//fills a driver object array with the information from the driver text file
 	public Driver[] getDrivers(Driver[] driverArr,int size) {
 		try {
-		Scanner scFile=new Scanner(new File("drivers.txt"));
+		Scanner scFile=new Scanner(new File("driverInfo.txt"));
 		String Line;
 		
 			while(scFile.hasNext()) {
