@@ -9,7 +9,7 @@ public class Customer {
 	String contactNum,name, pos, address, email, spclPrep;
 	double ttl;
 	int ordrAmnt;
-	//Customer object constructor
+	//Customer object constructor with specified parameters
 	public Customer(int ordrNum, String name, String contactNum,String address,String pos
 			,String email,int ordrAmnt,String[][] ordr,
 			String spclPrep,double ttl) 
@@ -41,7 +41,7 @@ public class Customer {
 		return newCust;
 	}
 	
-	//method to get the customers order
+	//method to get the customers order via a while loop
 	public static String[][] getOrder(String[][] ordr){
 		int i=1;
 		ordr[0][1]=JOptionPane.showInputDialog("Please enter a word or enter the word "
@@ -59,13 +59,13 @@ public class Customer {
 		return ordr;
 	}
 	
-	//gets the price of the item the customer is ordering
+	//gets the price of the item the customer is ordering using recursion
 	public static double getPrc(String meal,int i,Menu[] mnu) {
 		if(meal.equalsIgnoreCase(mnu[i].itm)) {
 			return mnu[i].price;
 		}
 		else {
-			return getPrc(meal,i,mnu);
+			return getPrc(meal,i,mnu); 
 		}
 		
 	}
